@@ -1,0 +1,99 @@
+.slider {
+    background: url('#{$imagesPath}/slider-bg.png') no-repeat center;
+    padding-bottom: 106px;
+
+    .container {
+        display: block;
+    }
+
+    .slick-slider {
+        li:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        .slick-dots {
+            display: flex;
+
+            button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: none;
+                padding: 0;
+                text-indent: -999px;
+                opacity: 0.4;
+                background-color: $white;
+            }
+
+            li.slick-active button {
+                opacity: 1;
+            }
+        }
+
+        .slick-arrow {
+            position: absolute;
+            bottom: 7px;
+            right: -15px;
+            width: 60px;
+            height: 60px;
+            text-indent: -9999px;
+            z-index: 100;
+            border: none;
+            outline: none;
+            background-color: transparent;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+                opacity: 0.4;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                background-size: contain;
+            }
+        }
+
+        .slick-prev {
+            right: 45px;
+            &:after {
+                background: url('#{$imagesPath}/prev.svg') no-repeat center;
+            }
+        }
+
+        .slick-next {
+            &:after {
+                background: url('#{$imagesPath}/next.svg') no-repeat center;
+            }
+        }
+
+        .slick-list {
+            padding: 167px 0 119px;
+        }
+    }
+
+    h1 {
+        font-size: 48px;
+        line-height: 1.4em;
+        font-family: $secondFF;
+        font-weight: $boldFW;
+        margin: 0 0 67px;
+    }
+    
+    .btn {
+        padding: 19px 56px;
+        font-size: 18px;
+    }
+}

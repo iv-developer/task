@@ -1,0 +1,77 @@
+extends extends/base.pug
+append vars
+  - var pageUrl = 'index.html';
+  - var pageTitle = 'Структура сайта';
+  - var classBody = '';
+  - var gridShow = true;
+block styles
+  link(href="css/index.css", rel="stylesheet" )
+block content
+
+  //slider
+  include ../components/slider/template
+  //contacts
+  include ../components/contacts/template
+  //popup
+  include ../components/popup/template
+
+    //- 
+      h1 Страницы проекта
+      +listLink({
+        tagName: 'ol',
+          items: [
+            {ttl: 'Главная страница', url: 'homepage.html', target: '_blank'},
+          ]
+        })
+      br
+      .tabs-panel
+        .in
+          a(href="#tab1" data-tab).is-active Заголовки
+          a(href="#tab2" data-tab) Элементы форм
+          a(href="#tab3" data-tab) Кнопки
+          a(href="#tab4" data-tab) Иконки
+      .tabs-wrap
+        .tab#tab1
+          h1 Заголовок h1
+          h2 Заголовок h2
+          h3 Заголовок h3
+          h4 Заголовок h4
+        .tab#tab2
+          h1 Элементы форм
+          +field({
+            lbl: 'Инпут <span class="txt-red">*</span>',
+            classInput: 'js-required',
+            mask: '+7 (999) 999-99-99'
+          })
+          +field({
+            lbl: 'Инпут  <span class="txt-red">*</span>',
+            classInput: 'js-required',
+            value: 'value'
+          })
+          +field({
+            type: 'select',
+            classInput: 'js-select',
+            options: [
+              {value: '', ttl: 'option 1'},
+              {value: '', ttl: 'option 2'},
+              {value: '', ttl: 'option 3'},
+              {value: '', ttl: 'option 3'},
+            ]
+          })
+        .tab#tab3.is-visible
+          h1 Кнопки
+          a(href="#").btn button
+          a(href="#").btn.btn-yellow button
+          a(href="#").btn.btn-border button
+        .tab#tab4
+          h1 Иконки
+          mixin iconList(data)
+            .icon-list.d-flex.flex-flow-row-wrap
+              each itm in data
+                .item.p-5
+                  +svg(itm.icon, itm.folder? itm.folder: 'sprite-svg').fs-24
+          +iconList([
+            {icon:'file-pdf'},
+            {icon:'loop', folder: 'color-svg'}
+          ])
+block scripts

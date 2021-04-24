@@ -1,0 +1,44 @@
+
+
+.tabs-panel {
+  overflow-y: hidden;
+  overflow-x: auto;
+  .in {
+    border-bottom: 1px solid;
+    display: flex;
+  }
+  a {
+    display: block;
+    padding:  5px 10px;
+    font-size: 12px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid;
+    border-bottom: none;
+    position: relative;
+    background: #FFF;
+    &.is-active {
+      opacity: 1;
+      color: #000;
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:after {
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      opacity: 0;
+    }
+  }
+}
+.tabs-wrap {
+
+}
+
+html {
+    height: 500px;
+}

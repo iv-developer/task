@@ -1,0 +1,32 @@
+.contacts
+    .container
+        .col-6.contacts__content
+            h2 Связь с нами
+            p.contacts__text У вас остались вопросы? Напишите нам - мы ответим в ближайшее время!
+            .contacts__content__bottom
+                .contacts__phone
+                    a(href="tel:81112223344") +7 (111) 222-33-44
+                .contacts__email
+                    img(class="icon" src="images/mail-white.svg")
+                    a(href="mailto:order@buhone.ru") order@buhone.ru
+
+        .col-6.contacts__form
+            form.form
+                +field({
+                    lbl: 'Имя',
+                    classInput: 'js-required',
+                    placeholder: 'Иван'
+                })
+                +field({
+                    lbl: 'Фамилия',
+                    classInput: 'js-required',
+                    placeholder: 'Иванов'
+                })
+                +field({
+                    type: 'textarea',
+                    lbl: 'Сообщение',
+                    classInput: 'js-required',
+                    placeholder: 'Ваше сообщение'
+                })
+                .btn__wrapper
+                    button.btn.js-submit Отправить сообщение
