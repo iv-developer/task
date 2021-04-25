@@ -1,5 +1,6 @@
 .slider {
     background: url('#{$imagesPath}/slider-bg.png') no-repeat center;
+    background-size: cover;
     padding-bottom: 106px;
 
     .container {
@@ -102,5 +103,20 @@
     .btn {
         padding: 19px 56px;
         font-size: 18px;
+    }
+
+    @include mq(phablet) {
+        padding-bottom: 70px;
+        
+        .slick-slider {
+            .slick-list {
+                padding: 100px 0;
+            }
+        }
+
+        h1 {
+            font-size: 34px;
+            margin: 0 0 40px;
+        }
     }
 }

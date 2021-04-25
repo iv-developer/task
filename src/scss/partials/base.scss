@@ -85,6 +85,7 @@ a:focus, a:hover {
   padding: 0 15px;
   max-width: $containerW;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 ul, ol {

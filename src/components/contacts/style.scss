@@ -28,6 +28,7 @@
         &__bottom {
             display: flex;
             justify-content: flex-end;
+            flex-wrap: wrap;
             padding-right: 55px;
 
             & > div {
@@ -128,6 +129,55 @@
             margin-right: -30px;
             font-size: 18px;
             padding: 19px 38px;
+        }
+    }
+
+    @include mq(tablet) {
+        .contacts__content {
+            &__bottom {
+                justify-content: flex-start;
+                padding-right: 0;
+            }
+        }
+
+        h2 {
+            font-size: 34px;
+        }
+        
+        &__text {
+            margin-bottom: 50px;
+        }
+
+        &__phone {
+            margin-bottom: 15px;
+        }
+
+        &__email {
+            margin-bottom: 30px;
+        }
+
+        &__form {
+            padding-left: 0;
+        }
+
+        .form {
+            & > *:first-child,
+            & > *:nth-child(2) {
+                width: 48%;
+            }
+
+            & > *:nth-child(2) {
+                margin-right: 0;
+            }
+
+            & > *:nth-child(3) {
+                width: 100%;
+                margin-right: 0px;
+            }
+
+            .btn {
+                margin-right: 0;
+            }
         }
     }
 }

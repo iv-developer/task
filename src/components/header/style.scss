@@ -39,6 +39,7 @@
     &__list,
     &__item {
       display: flex;
+      flex-wrap: wrap;
     }
 
     &__list {
@@ -63,6 +64,7 @@
       display: flex;
       justify-content: space-between;
       margin-left: 7px;
+      flex-wrap: wrap;
     }
 
     &__link {
@@ -71,6 +73,16 @@
       font-weight: $boldFW;
       letter-spacing: 1px;
       color: $black;
+    }
+  }
+
+  @include mq(tablet) {
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    &__menu {
+      padding-left: 0;
     }
   }
 }
