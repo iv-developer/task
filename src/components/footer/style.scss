@@ -1,5 +1,5 @@
 .footer {
-    padding: 44px 0 50px;
+    padding: 49px 0 50px;
     background-color: #F9F9F9;
 
     &__content {
@@ -10,6 +10,10 @@
             font-size: 14px;
             color: $black;
 
+            &:first-child {
+                margin-left: -12px;
+            }
+            
             &:last-child {
                 margin-right: -30px;
             }

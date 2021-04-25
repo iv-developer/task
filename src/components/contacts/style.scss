@@ -1,6 +1,7 @@
 .contacts {
     margin-top: 5px;
     background: url('#{$imagesPath}/contacts-bg.png') no-repeat center;
+    background-size: cover;
     padding: 126px 0 140px;
 
     .contacts__content {
@@ -94,14 +95,14 @@
         & > *:nth-child(3) {
             width: 108%;
             margin-right: -30px;
-            margin-top: 38px;
+            margin-top: 37px;
             margin-bottom: 53px;
         }
 
         input, textarea {
             display: block;
             width: 100%;
-            margin-top: 16px;
+            margin-top: 11px;
             background-color: transparent;
             outline: none !important;
             border: none;
